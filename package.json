@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel scripts/main.js -o scripts/main.es5.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "papercss": "^1.6.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1"
   }
 }
