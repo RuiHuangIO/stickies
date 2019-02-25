@@ -101,7 +101,8 @@ class StickyNote extends HTMLElement {
       dateFormatterOptions
     ).format(date);
     this.dateElement.textContent = `Created on ${shortDate}`;
-
+    // originally, the logic for this part is handled in attributeChangeCallback();
+    // however, it creates an error, likely due to new spec define attributeChange to be Synchronous
     this.deleteButton = this.querySelector(".btn-small");
     this.deleteButton.addEventListener("click", () => this.deleteNote());
   }
